@@ -25,7 +25,7 @@
     "lint:fix": "yarn lint --fix",
     "test": "jest",
     "test:cov": "jest --coverage",
-    "format": "prettier --write \"*.{ts}\""
+    "format": "prettier --write \"**/*.ts\""
   },
   "license": "MIT",
   "devDependencies": {

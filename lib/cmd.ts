@@ -17,12 +17,12 @@ const toPromise = (child: IChild): Promise<string> =>
 const sanitizer = (command: string): IMetadata[] => {
   return command.split(/\|\s/g).map(data => {
     let metadata: IMetadata = { cmd: '', options: [] }
-    const [cmd, opts] = data.split(/\s/) as IUnstructuredCommand
+    const [cmd, ...opts] = data.split(/\s/g) as IUnstructuredCommand
 
     if (!COMMANDS.includes(cmd)) {
       throw new Error('Command not available')
     } else {
-      metadata = { cmd, options: opts ? [opts] : [] }
+      metadata = { cmd, options: opts ? [...opts] : [] }
     }
 
     return metadata

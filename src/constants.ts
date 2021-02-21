@@ -1,0 +1,17 @@
+export const COMMANDS = <const>[
+  'cp',
+  'wc',
+  'rm',
+  'cat',
+  'echo',
+  'ls',
+  'pwd',
+  'mkdir',
+  'cd',
+  'clear',
+  'ps',
+  'history',
+  'chown',
+  'du',
+  'find',
+]

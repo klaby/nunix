@@ -1,6 +1,7 @@
 {
-  "name": "npm-pkg-boilerplate",
-  "version": "0.0.0",
+  "name": "nunix",
+  "version": "0.1.0-alpha.1",
+  "description": "Tool for executing Unix commands on NodeJs.",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "author": {
@@ -9,12 +10,12 @@
     "url": "https://hiukky.com"
   },
   "bugs": {
-    "url": "https://github.com/hiukky/npm-pkg-boilerplate/issues"
+    "url": "https://github.com/hiukky/nunix/issues"
   },
-  "homepage": "https://github.com/hiukky/npm-pkg-boilerplate#readme",
+  "homepage": "https://github.com/hiukky/nunix#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/hiukky/npm-pkg-boilerplate"
+    "url": "https://github.com/hiukky/nunix"
   },
   "scripts": {
     "prebuild": "rimraf dist",
@@ -52,9 +53,8 @@
     "dist"
   ],
   "keywords": [
-    "nodejs",
-    "types",
-    "typeof",
-    "typechecker"
+    "unix",
+    "linux",
+    "shell"
   ]
 }

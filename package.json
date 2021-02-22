@@ -1,6 +1,6 @@
 {
   "name": "nunix",
-  "version": "0.1.0-alpha.1",
+  "version": "0.1.0-alpha.2",
   "description": "Tool for executing Unix commands on NodeJs.",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",

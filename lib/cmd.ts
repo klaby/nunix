@@ -8,10 +8,11 @@ import {
   IUnstructuredCommand,
 } from '../src/interfaces'
 
-const toPromise = (child: IChild): Promise<string> =>
+const toPromise = (child: IChild): Promise<ICommand> =>
   new Promise((resolve, reject) => {
+    child.on('close', () => resolve(null))
+    child.on('error', error => reject(error))
     child.stdout.on('data', data => resolve(String(data)))
-    child.stderr?.on('data', data => reject(String(data)))
   })
 
 const sanitizer = (command: string): IMetadata[] => {
@@ -29,7 +30,7 @@ const sanitizer = (command: string): IMetadata[] => {
   })
 }
 
-export const cmd = (command: string, options?: IOptions): ICommand => {
+export const cmd = (command: string, options?: IOptions): Promise<ICommand> => {
   const commands = sanitizer(command)
 
   let child: IChild = spawn('echo')

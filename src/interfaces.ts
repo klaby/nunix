@@ -15,7 +15,7 @@ export type IMetadata = {
   options: string[]
 }
 
-export type ICommand = Promise<string>
+export type ICommand = string | number | null
 export type ICommandOptions = typeof COMMANDS[number]
 export type IUnstructuredCommand = [ICommandOptions, ...string[]]
 export type IArgs = string[]
